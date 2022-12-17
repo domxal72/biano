@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { BLUE, WHITE } from "../colors";
+import Category from "./category";
+import Content from "./content";
 import Nav from "./nav";
 
 const Body = styled.div`
@@ -20,27 +22,53 @@ const Main = styled.div`
 `;
 
 const CloseButton = styled.div`
+  @media only screen and (min-width: 600px) {
+    top: -15px;
+    right: -15px;
+    left: initial;
+    box-shadow: 0px 5px 15px #afb3c84d;
+    border: 1px solid #eaeff9;
+  }
+  position: absolute;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: -15px;
-  right: -15px;
   width: 50px;
   height: 50px;
   background: ${WHITE};
   border-radius: 50%;
-  box-shadow: 0px 5px 15px #afb3c84d;
   cursor: pointer;
-  border: 1px solid #eaeff9;
+`;
+
+const PageHeader = styled.div`
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+  display: block;
+`;
+
+const Grid = styled.div`
+  display: grid;
+`;
+
+const Header = styled.div`
+  display: flex;
 `;
 
 export default function Layout() {
   return (
     <Body>
       <Main>
+        <Header>
+          <CloseButton>x</CloseButton>
+          <PageHeader>Vyberte produkt</PageHeader>
+        </Header>
         <Nav />
-        <CloseButton>x</CloseButton>
+        <Grid>
+          <Category />
+          <Content />
+        </Grid>
       </Main>
     </Body>
   );
