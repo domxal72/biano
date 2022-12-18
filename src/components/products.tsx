@@ -6,16 +6,18 @@ import { filters, products } from "../data";
 const ContentWrapper = styled.div`
   position: relative;
   overflow: hidden;
-  padding: 0 15px;
+  @media only screen and (min-width: ${breakSm}px) {
+    padding: 0 20px;
+  }
 `;
 
 const ContentHeader = styled.div`
   font-size: 18px;
   margin-top: 20px;
-  padding: 0 15px;
   @media only screen and (min-width: ${breakSm}px) {
     font-size: 25px;
     margin-top: 0;
+    padding: 0 20px;
   }
 `;
 
@@ -81,7 +83,6 @@ const ProductGrid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8px;
   row-gap: 20px;
-  padding: 0 15px;
   @media only screen and (min-width: ${breakSm}px) {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
