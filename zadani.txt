@@ -11,8 +11,3 @@ Seznam kategorií by měl být skrývatelný po kliku na šipku.
 Pro grid produktů existuje minimální (2 sloupce obsahu) a maximální (4 sloupce) návrh. Pokud chcete, můžete vytvořit i breakpoint pro rozměr mezi - 3 sloupce - kde bude menu a 2 sloupce produktů.
 
 https://xd.adobe.com/view/61a28d88-48a3-4dc8-98b9-1afa5f6a2afc-34f1/grid  
-
-TODO:
-SS theme
-pojemenovat komponenty podle XD
-hide horizontal scrollbar?
